@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="board-bg"><img src="img/14.jpg" alt=""></div>
+    <div class="board" id="board">
+        <div class="stats">
+            <div class="chart-container">
+                <canvas id="stat-chart"></canvas>
+            </div>
+            <h2 id="attack">Attack</h2>
+            <h2 id="defense">Def.</h2>
+            <h2 id="versatility">Versatility</h2>
+            <h2 id="synergy">Synergy</h2>
+            <h2 id="f2p">F2P</h2>
+        </div>
+        <h1 id="deck-title"></h1>
+        <div id="deck-board" class="deck-container"></div>
+        <div class="cost-container">
+            <h2 id="cost"></h2>
+            <img src="img/elixir.png" alt="elixir">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

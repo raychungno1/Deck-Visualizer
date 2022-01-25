@@ -1,0 +1,204 @@
+@font-face {
+    font-family: Clash-Regular;
+    src: url("./Clash-Regular.otf");
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Clash-Regular', sans-serif;
+}
+
+:root {
+    --board-height: min(100vh, 56.25vw);
+    --board-width: calc(16 * var(--board-height) / 9);
+    --card-height: calc(var(--board-height) / 3.85);
+}
+
+
+body {
+    margin: 0;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.board {
+    height: var(--board-height);
+    width: var(--board-width);
+    margin: 0 auto;
+    padding: calc(var(--board-height) / 20);
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+}
+
+.board-bg {
+    position: absolute;
+    height: var(--board-height);
+    width: var(--board-width);
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.board-bg img {
+    width: var(--board-width);
+    filter: brightness(50%);
+    /* height: var(--board-height); */
+    object-fit: cover;
+}
+
+#deck-title {
+    width: 60%;
+    height: 2em;
+    color: white;
+    text-shadow:
+        -0.02em -0.02em black,
+        0.02em -0.02em black,
+        -0.02em 0.02em black,
+        0.02em 0.02em black,
+        0.06em 0.06em 0.06em black;
+    font-size: calc(var(--card-height) / 2);
+}
+
+.deck-container {
+    width: calc(var(--board-width) * 0.53);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin-bottom: -2%;
+}
+
+.deck-container img {
+    font-size: calc(var(--card-height) / 4);
+    filter: drop-shadow(0.1em 0.1em 0.1em rgb(0, 0, 0));
+}
+
+.hero {
+    transform: translate(0, -8%);
+}
+
+.legendary {
+    transform: scale(1.05);
+}
+
+.cost-container {
+    padding-top: calc(var(--card-height) / 30);
+    transform: scale(2) translate(0, 20%);
+    width: 55%;
+    margin-bottom: calc(var(--board-height) / 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,.75) 50%,rgba(0,0,0,.75) 55%,rgba(133,88,84,0) 75%);
+    visibility: hidden;
+}
+
+/* .cost-bg {
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 40%,rgba(0,0,0,.75) 60%,rgba(133,88,84,0) 100%);
+    position: absolute;
+    width: 55%;
+    height: calc(var(--card-height) / 2);
+    top: calc(var(--card-height) * 3)
+} */
+
+.cost-container img {
+    height: calc(var(--card-height) / 4);
+    padding: 0 calc(var(--card-height) / 30) calc(var(--card-height) / 30);
+    transform: scale(1.25);
+}
+
+.cost-container div {
+    position: relative;
+    overflow: hidden;
+    /* padding-right: calc(var(--card-height) / 8); */
+}
+
+#cost {
+    color: #f56ff5;
+    text-shadow:
+        -0.02em -0.02em black,
+        0.02em -0.02em black,
+        -0.02em 0.02em black,
+        0.02em 0.02em black,
+        0.06em 0.06em 0.06em black;
+    font-size: calc(var(--card-height) / 4);
+}
+
+.stats {
+    position: absolute;
+    width: 42.5%;
+    height: calc(2 * var(--board-height) / 3);
+    background: rgba(0, 0, 0, .5);
+    top: 50%;
+    right: 1.8%;
+    transform: translate(0, -50%);
+    border-radius: 2.5%;
+    /* border: calc(var(--board-height) / 300) solid black; */
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: inherit;
+    overflow: hidden;
+    backdrop-filter: blur(.5rem);
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5),
+        .25rem .25rem 1rem 0 rgba(0, 0, 0, 1); 
+    visibility: hidden;
+}
+
+.chart-container {
+    position: relative;
+    width: 75%;
+}
+
+.stats h2 {
+    position: absolute;
+    color: white;
+    text-shadow:
+        -0.03em -0.03em black,
+        0.03em -0.03em black,
+        -0.03em 0.03em black,
+        0.03em 0.03em black,
+        0.08em 0.08em 0.08em black;
+    font-size: calc(var(--card-height) / 6);
+}
+
+#attack {
+    top: 5%
+}
+
+#defense {
+    top: 34%;
+    right: 5%;
+}
+
+#versatility {
+    bottom: 5%;
+    right: 5%;
+}
+
+#synergy {
+    bottom: 5%;
+    left: 10%;
+}
+
+#f2p {
+    top: 34%;
+    left: 5%;
+}
