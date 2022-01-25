@@ -1,5 +1,5 @@
-import { parseDeckLink, f2p, avgCost } from "./parse-deck.js";
-import { renderChart } from "./render-chart.js";
+import { parseDeckLink, f2p, avgCost } from "./js/parse-deck.js";
+import { renderChart } from "./js/render-chart.js";
 
 const deckBoard = document.getElementById("deck-board");
 const titleEl = document.getElementById("deck-title");
