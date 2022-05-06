@@ -5,6 +5,13 @@ const LEGENDARY = 1.25;
 const HERO = 0;
 
 const cards = {
+    26000065: {
+        name: "mightyMiner",
+        cost: 4,
+        rarity: HERO,
+        dsName: "MightyMiner",
+        img: imgPath("mightyMiner")
+    },
     26000028: {
         name: "threeMusketeers",
         cost: 9,
